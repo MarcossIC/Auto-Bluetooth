@@ -40,12 +40,13 @@ void setup (){
     digitalWrite( Motor2B, LOW );
 }
 
+//Acciones del auto en loop
 void loop(){
-  //Este if mira si el bluetooth esta activo o no, si esta activo entra si no no entra
+  //Si el Bluetooth esta activo, ejecuta el codigo
   if(miBT.available()){
     //Recupera el valor del boton que presionaste
       char botonPresionado = (char)miBT.read();
-      //le paso el valor del boton y decide que accion debe hacer
+      //Segun el boton que haz presionado realiza un accion
       switch(botonPresionado){
         //  EL AUTO PARA
         case 'S':
